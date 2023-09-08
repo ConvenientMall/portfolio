@@ -14,9 +14,13 @@ class BarChart extends Component {
 
         const svg = d3.select("body")
                     .append("svg")
-                    .attr('width', window.innerWidth -20)
-                    .attr('height', window.innerHeight -400);
-
+                    .attr('width', window.innerWidth)
+                    .attr('height', window.innerHeight -150);
+                    
+        svg.append("rect")
+           .attr("width", "100%")
+                    .attr("height", "100%")
+                    .attr("fill", "pink");
         svg.selectAll("rect")
             .data(data)
             .enter()
